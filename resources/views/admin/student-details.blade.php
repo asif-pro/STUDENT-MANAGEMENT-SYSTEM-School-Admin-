@@ -39,7 +39,7 @@
         <div class="navbar navbar-expand-md header-menu-one bg-light">
             <div class="nav-bar-header-one">
                 <div class="header-logo">
-                    <a href="/adminHome">
+                    <a href="/home">
                         <img src="/assets/img/logo.png" alt="logo">
                     </a>
                 </div>
@@ -240,7 +240,7 @@
            <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
                <div class="mobile-sidebar-header d-md-none">
                     <div class="header-logo">
-                        <a href="/adminHome"><img src="/assets/img/logo1.png" alt="logo"></a>
+                        <a href="/home"><img src="/assets/img/logo1.png" alt="logo"></a>
                     </div>
                </div>
                 <div class="sidebar-menu-content">
@@ -249,7 +249,7 @@
                             <a href="#" class="nav-link"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="/adminHome" class="nav-link"><i class="fas fa-angle-right"></i>Admin</a>
+                                    <a href="/home" class="nav-link"><i class="fas fa-angle-right"></i>Admin</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="index3.html" class="nav-link"><i class="fas fa-angle-right"></i>Students</a>
@@ -266,13 +266,13 @@
                             <a href="#" class="nav-link"><i class="flaticon-classmates"></i><span>Students</span></a>
                             <ul class="nav sub-group-menu sub-group-active">
                                 <li class="nav-item">
-                                    <a href="/adminHome/all-student" class="nav-link"><i class="fas fa-angle-right"></i>All Students</a>
+                                    <a href="/home/all-student" class="nav-link"><i class="fas fa-angle-right"></i>All Students</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/adminHome/student-details" class="nav-link menu-active"><i class="fas fa-angle-right"></i>Student Details</a>
+                                    <a href="/home/student-details" class="nav-link menu-active"><i class="fas fa-angle-right"></i>Student Details</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/adminHome/admit-form" class="nav-link"><i class="fas fa-angle-right"></i>Admission Form</a>
+                                    <a href="/home/admit-form" class="nav-link"><i class="fas fa-angle-right"></i>Admission Form</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="student-promotion.html" class="nav-link"><i class="fas fa-angle-right"></i>Student Promotion</a>

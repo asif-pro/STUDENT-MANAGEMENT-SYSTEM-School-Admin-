@@ -41,7 +41,7 @@
         <div class="navbar navbar-expand-md header-menu-one bg-light">
             <div class="nav-bar-header-one">
                 <div class="header-logo">
-                    <a href="/adminHome">
+                    <a href="/home">
                         <img src="/assets/img/logo.png" alt="logo">
                     </a>
                 </div>

@@ -7,7 +7,7 @@
 </head>
 <body>
 	
-	<a href="/adminHome/all-student">Back</a> 
+	<a href="/home/all-student">Back</a> 
 	
 	
 	

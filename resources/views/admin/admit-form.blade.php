@@ -43,7 +43,7 @@
         <div class="navbar navbar-expand-md header-menu-one bg-light">
             <div class="nav-bar-header-one">
                 <div class="header-logo">
-                    <a href="/adminHome">
+                    <a href="/home">
                         <img src="/assets/img/logo.png" alt="logo">
                     </a>
                 </div>
@@ -244,7 +244,7 @@
             <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
                <div class="mobile-sidebar-header d-md-none">
                     <div class="header-logo">
-                        <a href="/adminHome"><img src="/assets/img/logo1.png" alt="logo"></a>
+                        <a href="/home"><img src="/assets/img/logo1.png" alt="logo"></a>
                     </div>
                </div>
                 <div class="sidebar-menu-content">
@@ -253,7 +253,7 @@
                             <a href="#" class="nav-link"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="/adminHome" class="nav-link"><i class="fas fa-angle-right"></i>Admin</a>
+                                    <a href="/home" class="nav-link"><i class="fas fa-angle-right"></i>Admin</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="index3.html" class="nav-link"><i
@@ -272,15 +272,15 @@
                             <a href="#" class="nav-link"><i class="flaticon-classmates"></i><span>Students</span></a>
                             <ul class="nav sub-group-menu sub-group-active">
                                 <li class="nav-item">
-                                    <a href="/adminHome/all-student" class="nav-link"><i class="fas fa-angle-right"></i>All
+                                    <a href="/home/all-student" class="nav-link"><i class="fas fa-angle-right"></i>All
                                         Students</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/adminHome/student-details" class="nav-link"><i
+                                    <a href="/home/student-details" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Student Details</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/adminHome/admit-form" class="nav-link menu-active"><i
+                                    <a href="/home/admit-form" class="nav-link menu-active"><i
                                             class="fas fa-angle-right"></i>Admission Form</a>
                                 </li>
                                 <li class="nav-item">
@@ -294,15 +294,15 @@
                                     class="flaticon-multiple-users-silhouette"></i><span>Teachers</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="/adminHome/all-teacher" class="nav-link"><i class="fas fa-angle-right"></i>All
+                                    <a href="/home/all-teacher" class="nav-link"><i class="fas fa-angle-right"></i>All
                                         Teachers</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/adminHome/teacher-details" class="nav-link"><i
+                                    <a href="/home/teacher-details" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Teacher Details</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/adminHome/add-teacher" class="nav-link"><i class="fas fa-angle-right"></i>Add
+                                    <a href="/home/add-teacher" class="nav-link"><i class="fas fa-angle-right"></i>Add
                                         Teacher</a>
                                 </li>
                                 <li class="nav-item">
@@ -363,17 +363,17 @@
                                     class="flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i><span>Class</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="/adminHomeall-student/all-class" class="nav-link"><i class="fas fa-angle-right"></i>All
+                                    <a href="/homeall-student/all-class" class="nav-link"><i class="fas fa-angle-right"></i>All
                                         Classes</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/adminHome/add-class" class="nav-link"><i class="fas fa-angle-right"></i>Add New
+                                    <a href="/home/add-class" class="nav-link"><i class="fas fa-angle-right"></i>Add New
                                         Class</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="/adminHome/all-subject" class="nav-link"><i
+                            <a href="/home/all-subject" class="nav-link"><i
                                     class="flaticon-open-book"></i><span>Subject</span></a>
                         </li>
                         <li class="nav-item">
@@ -457,7 +457,7 @@
                     <h3>Students</h3>
                     <ul>
                         <li>
-                            <a href="/adminHome">Home</a>
+                            <a href="/home">Home</a>
                         </li>
                         <li>Student Admit Form</li>
                     </ul>

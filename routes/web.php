@@ -16,6 +16,30 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/page', function(){
-	return view('test');
-});
+
+Route::get('/login','LoginController@index');
+Route::post('/login','LoginController@validation');
+Route::get('/logout','LogoutController@index');
+
+Route::get('/home','AdminHomeController@index');
+
+Route::get('/student-admit-form','AdminHomeController@studentAdmitForm');
+
+Route::get('/all-student','AdminHomeController@allStudent');
+
+Route::get('/all-teacher','AdminHomeController@allTeacher');
+
+Route::get('/add-teacher','AdminHomeController@addTeacher');
+
+Route::get('/student-details','AdminHomeController@studentDetails');
+
+Route::get('/all-class','AdminHomeController@allClass');
+
+Route::get('/add-class','AdminHomeController@addClass');
+
+Route::get('/notice-board','AdminHomeController@noticeBoard');
+
+Route::get('/all-subject','AdminHomeController@allSubject');
+
+Route::get('/class-routine','AdminHomeController@classRoutine');
+
