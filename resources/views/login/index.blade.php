@@ -41,11 +41,15 @@
                 <div class="item-logo">
                     <img src="/assets/img/logo2.png" alt="logo">
                 </div>
+                <label style="font-size:30px;color:Red;"><b>{{session('msg2')}}</b></label>
+                
                 <form method="post" class="login-form">
+                    @csrf
                     <div class="form-group">
                         <label>Username</label>
                         <input name="username" type="text" placeholder="Enter usrename" class="form-control">
                         <i class="far fa-envelope"></i>
+                        <label style="font-size:20px;color:Red;"><b>{{session('msg')}}</b></label>
                     </div>
                     <div class="form-group">
                         <label>Password</label>

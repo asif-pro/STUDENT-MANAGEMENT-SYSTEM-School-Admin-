@@ -14,6 +14,7 @@
 	<h3>Delete student</h3>
 
 	<form method="post">
+		@csrf
 		<table border="1">
 			<tr>
 				<td>studentname</td>

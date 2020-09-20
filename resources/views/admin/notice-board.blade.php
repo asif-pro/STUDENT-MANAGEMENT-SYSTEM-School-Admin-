@@ -452,6 +452,7 @@
                                     </div>
                                 </div>
                                 <form method="post" class="new-added-form">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                             <label>Title</label>

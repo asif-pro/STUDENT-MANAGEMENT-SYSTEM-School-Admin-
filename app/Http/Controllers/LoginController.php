@@ -10,7 +10,16 @@ class loginController extends Controller
   }
 
   function validation(Request $request){
-  	return redirect('/home');  
+
+  	if($request->username == $request->password){
+  		$request->session()->put('username',$request->username);
+  		  	return redirect('/home');  
+
+  	}
+  	else{
+  		$request->session()->flash('msg','invalid username or password');
+  		return redirect('/login');
+  	}
   	
   }
 }

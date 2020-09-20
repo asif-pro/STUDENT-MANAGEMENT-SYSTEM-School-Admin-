@@ -5,48 +5,55 @@ use Illuminate\Http\Request;
 
 class adminHomeController extends Controller
 {
-  function index(){
-  	return view('admin.adminHome');
+  function index(Request $request){
+
+    if ($request->session()->has('username')){
+      return view('admin.adminHome'); 
+    }
+    else{
+      $request->session()->flash('msg2','You are not logged in, please log in first to execute this request ');
+      return redirect('/login');}
+  	
   }
 
-  function studentAdmitForm(){
+  function studentAdmitForm(Request $request){
   	return view('admin.admit-form');
   }
 
-  function allStudent(){
+  function allStudent(Request $request){
   	return view('admin.all-student');
   }  
 
-  function allTeacher(){
+  function allTeacher(Request $request){
   	return view('admin.all-teacher');
   }
 
-  function addTeacher(){
+  function addTeacher(Request $request){
   	return view('admin.add-teacher');
   }
 
-  function studentDetails(){
+  function studentDetails(Request $request){
   	return view('admin.student-details');
   }
 
-  function allClass(){
+  function allClass(Request $request){
   	return view('admin.all-class');
   }
 
-  function addClass(){
+  function addClass(Request $request){
   	return view('admin.add-class');
   }
 
 
-  function noticeBoard(){
+  function noticeBoard(Request $request){
   	return view('admin.notice-board');
   }
 
-  function allSubject(){
+  function allSubject(Request $request){
   	return view('admin.all-subject');
   }
 
-  function classRoutine(){
+  function classRoutine(Request $request){
   	return view('admin.class-routine');
   }
 

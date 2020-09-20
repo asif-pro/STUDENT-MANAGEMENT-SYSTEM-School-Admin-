@@ -483,6 +483,7 @@
                             </div>
                         </div>
                         <form class="mg-b-20">
+                            @csrf
                             <div class="row gutters-8">
                                 <div class="col-4-xxxl col-xl-4 col-lg-3 col-12 form-group">
                                     <input type="text" placeholder="Search by Name ..." class="form-control">
