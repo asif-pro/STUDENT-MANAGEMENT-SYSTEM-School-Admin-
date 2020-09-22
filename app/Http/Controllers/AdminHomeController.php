@@ -7,13 +7,13 @@ class adminHomeController extends Controller
 {
   function index(Request $request){
 
-    if ($request->session()->has('username')){
-      return view('admin.adminHome'); 
+    /*if ($request->session()->has('username')){
+      
     }
     else{
       $request->session()->flash('msg2','You are not logged in, please log in first to execute this request ');
-      return redirect('/login');}
-  	
+      return redirect('/login');}*/  
+  	return view('admin.adminHome'); 
   }
 
   function studentAdmitForm(Request $request){

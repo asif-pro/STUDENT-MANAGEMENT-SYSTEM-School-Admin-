@@ -21,7 +21,11 @@ Route::get('/login','LoginController@index');
 Route::post('/login','LoginController@validation');
 Route::get('/logout','LogoutController@index');
 
-Route::get('/home','AdminHomeController@index');
+
+
+Route::middleware(['sess'])->group(function(){
+
+Route::get('/home','AdminHomeController@index')->middleware('sess');
 
 Route::get('/student-admit-form','AdminHomeController@studentAdmitForm');
 
@@ -42,4 +46,6 @@ Route::get('/notice-board','AdminHomeController@noticeBoard');
 Route::get('/all-subject','AdminHomeController@allSubject');
 
 Route::get('/class-routine','AdminHomeController@classRoutine');
+
+});
 
