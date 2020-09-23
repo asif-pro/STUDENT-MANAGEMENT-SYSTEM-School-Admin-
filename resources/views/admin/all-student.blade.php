@@ -522,8 +522,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <% for(var i=0; i < studentList.length; i++){ %>
-                                    <tr>
+                                     @for($i=0; $i != count ($students); $i++)
                                         <td>
                                             <div class="form-check">
                                                 <input type="checkbox" class="form-check-input">
@@ -531,21 +530,21 @@
                                             </div>
                                         </td>
                                         <td class="text-center"><img src="/assets/img/figure/student2.png" alt="student"></td>
-                                        <td><%= studentList[i].sid %></td>
-                                        <td><%= studentList[i].sName %></td>
-                                        <td><%= studentList[i].section %></td>
-                                        <td><%= studentList[i].bGroup %></td>
-                                         <td><%= studentList[i].gender %></td>
-                                        <td><%= studentList[i].fName %></td>
-                                        <td><%= studentList[i].mName %></td>
-                                        <td><%= studentList[i].dob %></td>
-                                        <td><%= studentList[i].gPN %></td>
-                                        <td><%= studentList[i].eMail %></td>
-                                        <td><%= studentList[i].religion %></td>
-                                        <td><%= studentList[i].address %></td>
-                                        <td><%= studentList[i].admissionClass %></td>
-                                        <td><%= studentList[i].admissionDate %></td>
-                                        <td><a  class="btn-fill-lg bg-blue-dark btn-hover-yellow" >UPDATE</a>  <a href="/home/delete/<%= studentList[i].sid %>" class="btn-fill-lg btn-gradient-yellow"  > DELETE </a></td>
+                                        <td>{{$students[$i]->sid}}</td>
+                                        <td>{{$students[$i]->sName}}</td>
+                                        <td>{{$students[$i]->section}}</td>
+                                        <td>{{$students[$i]->bGroup}}</td>
+                                        <td>{{$students[$i]->gender}}</td>
+                                        <td>{{$students[$i]->fName}}</td>
+                                        <td>{{$students[$i]->mName}}</td>
+                                        <td>{{$students[$i]->dob}}</td>
+                                        <td>{{$students[$i]->gPN}}</td>
+                                        <td>{{$students[$i]->eMail}}</td>
+                                        <td>{{$students[$i]->religion}}</td>
+                                        <td>{{$students[$i]->address}}</td>
+                                        <td>{{$students[$i]->admissionClass}}</td>
+                                        <td>{{$students[$i]->admissionDate}}</td>
+                                        <td><a  class="btn-fill-lg bg-blue-dark btn-hover-yellow" >UPDATE</a>  <a href="/home/delete/{{$students[$i]->sid}}" class="btn-fill-lg btn-gradient-yellow"  > DELETE </a></td>
                                         <td>
                                             <div class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"
@@ -563,7 +562,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    <% } %>
+                                    @endfor
                                     
                                 </tbody>
                             </table>

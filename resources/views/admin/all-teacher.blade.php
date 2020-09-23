@@ -492,7 +492,7 @@
                                 <tbody>
 
 
-                                    <% for(var i=0; i < teacherList.length; i++){ %>
+                                    @for($i=0; $i != count ($teachers); $i++)
                                     <tr>
                                         <td>
                                             <div class="form-check">
@@ -501,17 +501,14 @@
                                             </div>
                                         </td>
                                         <td class="text-center"><img src="/assets/img/figure/student2.png" alt="student"></td>
-                                        <td><%= teacherList[i].tid %></td>
-                                        <td><%= teacherList[i].tName %></td>
-                                        <td><%= teacherList[i].department %></td>
-                                       
-                                         <td><%= teacherList[i].gender %></td>
-                                       
-                                        <td><%= teacherList[i].dob %></td>
-                                        <td><%= teacherList[i].phone %></td>
-                                        <td><%= teacherList[i].email %></td>
-                                     
-                                        <td><%= teacherList[i].address %></td>
+                                        <td>{{$teachers[$i]->tid}}</td>
+                                        <td>{{$teachers[$i]->tName}}</td>
+                                        <td>{{$teachers[$i]->department}}</td>
+                                        <td>{{$teachers[$i]->gender}}</td>
+                                        <td>{{$teachers[$i]->dob}}</td>
+                                        <td>{{$teachers[$i]->phone}}</td>
+                                        <td>{{$teachers[$i]->email}}</td>
+                                        <td>{{$teachers[$i]->address}}</td>
                                        
                                          <td>
                                             <div class="dropdown">
@@ -527,7 +524,7 @@
                                         </td>
                                     </tr>
                                     
-                                     <% } %>
+                                    @endfor
                                 </tbody>
                             </table>
                         </div>

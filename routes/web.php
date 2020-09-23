@@ -28,6 +28,7 @@ Route::middleware(['sess'])->group(function(){
 Route::get('/home','AdminHomeController@index')->middleware('sess');
 
 Route::get('/student-admit-form','AdminHomeController@studentAdmitForm');
+Route::post('/student-admit-form','AdminHomeController@storeStudent');
 
 Route::get('/all-student','AdminHomeController@allStudent');
 

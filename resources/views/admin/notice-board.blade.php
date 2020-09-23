@@ -506,14 +506,14 @@
                                 </form>
 
                                 <div class="notice-board-wrap">
-                                    <% for(var i=0; i < noticeList.length; i++){ %>
+                                    @for($i=0; $i != count ($notices); $i++)
                                     <div class="notice-list">
-                                        <div class="post-date bg-skyblue"><%= noticeList[i].date %></div>
-                                        <h6 class="notice-title"><a href="#"><%= noticeList[i].nTitle %></a></h6>
-                                        <a href=""> <%= noticeList[i].nDetails %> </a>
-                                        <div class="entry-meta"><%= noticeList[i].pBy %>  / <span>5 min ago</span></div>
+                                        <div class="post-date bg-skyblue">{{$notices[$i]->Date}}</div>
+                                        <h6 class="notice-title"><a href="#">{{$notices[$i]->nTitle}}</a></h6>
+                                        <a href="">{{$notices[$i]->nDetails}}</a>
+                                        <div class="entry-meta">{{$notices[$i]->pBy}}<span>5 min ago</span></div>
                                     </div>
-                                     <% } %>
+                                     @endfor
                                 </div>
                             </div>
                         </div>

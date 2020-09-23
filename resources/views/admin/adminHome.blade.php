@@ -311,23 +311,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item sidebar-nav-item">
-                            <a href="#" class="nav-link"><i class="flaticon-couple"></i><span>Parents</span></a>
-                            <ul class="nav sub-group-menu">
-                                <li class="nav-item">
-                                    <a href="all-parents.html" class="nav-link"><i class="fas fa-angle-right"></i>All
-                                        Parents</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="parents-details.html" class="nav-link"><i
-                                            class="fas fa-angle-right"></i>Parents Details</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="add-parents.html" class="nav-link"><i class="fas fa-angle-right"></i>Add
-                                        Parent</a>
-                                </li>
-                            </ul>
-                        </li>
+                      
                         <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i class="flaticon-books"></i><span>Library</span></a>
                             <ul class="nav sub-group-menu">
@@ -365,19 +349,7 @@
                                     Routine</span></a>
                         </li>
                        
-                        <li class="nav-item sidebar-nav-item">
-                            <a href="#" class="nav-link"><i class="flaticon-shopping-list"></i><span>Exam</span></a>
-                            <ul class="nav sub-group-menu">
-                                <li class="nav-item">
-                                    <a href="exam-schedule.html" class="nav-link"><i class="fas fa-angle-right"></i>Exam
-                                        Schedule</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="exam-grade.html" class="nav-link"><i class="fas fa-angle-right"></i>Exam
-                                        Grades</a>
-                                </li>
-                            </ul>
-                        </li>
+                        
                         
                         <li class="nav-item">
                             <a href="/notice-board" class="nav-link"><i

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class adminHomeController extends Controller
 {
@@ -17,15 +19,22 @@ class adminHomeController extends Controller
   }
 
   function studentAdmitForm(Request $request){
-  	return view('admin.admit-form');
+   return view('admin.admit-form');
   }
+    /*function storeStudent(Request $request){
+    return view('admin.admit-form');
+  }*/
 
   function allStudent(Request $request){
-  	return view('admin.all-student');
+  	
+    $students = DB::table('studentt')->get();
+    return view('admin.all-student')->with('students', $students);
   }  
 
   function allTeacher(Request $request){
-  	return view('admin.all-teacher');
+  	
+    $teachers = DB::table('teacherr')->get();
+    return view('admin.all-teacher')->with('teachers', $teachers);
   }
 
   function addTeacher(Request $request){
@@ -46,15 +55,23 @@ class adminHomeController extends Controller
 
 
   function noticeBoard(Request $request){
-  	return view('admin.notice-board');
+  	
+  $notices = DB::table('noticeboard')->get();
+  return view('admin.notice-board')->with('notices', $notices);
+
   }
 
   function allSubject(Request $request){
-  	return view('admin.all-subject');
+  	
+    $subjects = DB::table('subjectt')->get();
+    return view('admin.all-subject')->with('subjects', $subjects);
+
   }
 
   function classRoutine(Request $request){
-  	return view('admin.class-routine');
+  	
+    $routine = DB::table('c_routine')->get();
+  return view('admin.class-routine')->with('routine', $routine);
   }
 
 

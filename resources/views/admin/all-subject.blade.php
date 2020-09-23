@@ -571,7 +571,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                             <% for(var i=0; i < subjectList.length; i++){ %>
+                                             @for($i=0; $i != count ($subjects); $i++)
                                             <tr>
                                                 <td>
                                                     <div class="form-check">
@@ -579,10 +579,10 @@
                                                         <label class="form-check-label">#0021</label>
                                                     </div>
                                                 </td>
-                                                <td><%= subjectList[i].sName %></td>
-                                                <td><%= subjectList[i].sCode %></td>
-                                                <td><%= subjectList[i].sType %></td>
-                                                <td><%= subjectList[i].sClass %></td>
+                                                <td>{{$subjects[$i]->sName}}</td>
+                                                <td>{{$subjects[$i]->sCode}}</td>
+                                                <td>{{$subjects[$i]->sType}}</td>
+                                                <td>{{$subjects[$i]->sClass}}</td>
                                                 <td>
                                                     <div class="dropdown">
                                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
@@ -600,7 +600,7 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <% } %>
+                                            @endfor
                                            
                                         </tbody>
                                     </table>
