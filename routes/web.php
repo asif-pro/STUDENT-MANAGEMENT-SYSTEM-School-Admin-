@@ -55,6 +55,9 @@ Route::post('/class-routine','AdminHomeController@storeRoutine');
 Route::get('/update-student/{id}','AdminHomeController@update');
 Route::post('/update-student/{id}','AdminHomeController@storeUpdate');
 
+Route::get('/delete-student/{id}','AdminHomeController@deleteStudent');
+Route::post('/delete-student/{id}','AdminHomeController@destroyStudent');
+
 
 });
 

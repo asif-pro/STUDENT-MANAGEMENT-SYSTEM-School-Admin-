@@ -191,6 +191,19 @@ class adminHomeController extends Controller
     return redirect('/all-student');
   }
 
+  function deleteStudent($id, Request $request){
+
+    $student = DB::table('Studentt')->where('sid', $id)->get();
+    return view('admin.delete')->with('student', $student);
+
+    //return view('admin.')-with('student', $student);
+
+  }
+  function destroyStudent($id, Request $request){
+    $destroy = DB::table ('Studentt')->where('sid',$id)->delete();
+    return redirect('/all-student');
+  }
+
 
   function classRoutine(Request $request){
   	
