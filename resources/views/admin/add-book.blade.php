@@ -2,32 +2,36 @@
 <html class="no-js" lang="">
 
 
-<!-- Mirrored from www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/teacher-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Jul 2020 15:10:33 GMT -->
+<!-- Mirrored from www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/add-book.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Jul 2020 15:10:33 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>AKKHOR | Teacher Details</title>
+    <title>AKKHOR | Add Book</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <!-- Normalize CSS -->
-    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
     <!-- Flaticon CSS -->
-    <link rel="stylesheet" href="/assets/fonts/flaticon.css">
+    <link rel="stylesheet" href="fonts/flaticon.css">
     <!-- Animate CSS -->
-    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Select 2 CSS -->
+    <link rel="stylesheet" href="css/select2.min.css">
+    <!-- Date Picker CSS -->
+    <link rel="stylesheet" href="css/datepicker.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="style.css">
     <!-- Modernize js -->
-    <script src="/assets/js/modernizr-3.6.0.min.js"></script>
+    <script src="js/modernizr-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -39,8 +43,8 @@
         <div class="navbar navbar-expand-md header-menu-one bg-light">
             <div class="nav-bar-header-one">
                 <div class="header-logo">
-                    <a href="/home">
-                        <img src="/assets/img/logo.png" alt="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="logo">
                     </a>
                 </div>
                   <div class="toggle-button sidebar-toggle">
@@ -83,7 +87,7 @@
                                 <span>Admin</span>
                             </div>
                             <div class="admin-img">
-                                <img src="/assets/img/figure/admin.jpg" alt="Admin">
+                                <img src="img/figure/admin.jpg" alt="Admin">
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -116,7 +120,7 @@
                             <div class="item-content">
                                 <div class="media">
                                     <div class="item-img bg-skyblue author-online">
-                                        <img src="/assets/img/figure/student11.png" alt="img">
+                                        <img src="img/figure/student11.png" alt="img">
                                     </div>
                                     <div class="media-body space-sm">
                                         <div class="item-title">
@@ -131,7 +135,7 @@
                                 </div>
                                 <div class="media">
                                     <div class="item-img bg-yellow author-online">
-                                        <img src="/assets/img/figure/student12.png" alt="img">
+                                        <img src="img/figure/student12.png" alt="img">
                                     </div>
                                     <div class="media-body space-sm">
                                         <div class="item-title">
@@ -146,7 +150,7 @@
                                 </div>
                                 <div class="media">
                                     <div class="item-img bg-pink">
-                                        <img src="/assets/img/figure/student13.png" alt="img">
+                                        <img src="img/figure/student13.png" alt="img">
                                     </div>
                                     <div class="media-body space-sm">
                                         <div class="item-title">
@@ -161,7 +165,7 @@
                                 </div>
                                 <div class="media">
                                     <div class="item-img bg-violet-blue">
-                                        <img src="/assets/img/figure/student11.png" alt="img">
+                                        <img src="img/figure/student11.png" alt="img">
                                     </div>
                                     <div class="media-body space-sm">
                                         <div class="item-title">
@@ -240,7 +244,7 @@
            <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
                <div class="mobile-sidebar-header d-md-none">
                     <div class="header-logo">
-                        <a href="/home"><img src="/assets/img/logo1.png" alt="logo"></a>
+                        <a href="index.html"><img src="img/logo1.png" alt="logo"></a>
                     </div>
                </div>
                 <div class="sidebar-menu-content">
@@ -249,7 +253,7 @@
                             <a href="#" class="nav-link"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="/home" class="nav-link"><i class="fas fa-angle-right"></i>Admin</a>
+                                    <a href="index.html" class="nav-link"><i class="fas fa-angle-right"></i>Admin</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="index3.html" class="nav-link"><i class="fas fa-angle-right"></i>Students</a>
@@ -266,30 +270,30 @@
                             <a href="#" class="nav-link"><i class="flaticon-classmates"></i><span>Students</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="/home/all-student" class="nav-link"><i class="fas fa-angle-right"></i>All Students</a>
+                                    <a href="all-student.html" class="nav-link"><i class="fas fa-angle-right"></i>All Students</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/home/student-details" class="nav-link"><i class="fas fa-angle-right"></i>Student Details</a>
+                                    <a href="student-details.html" class="nav-link"><i class="fas fa-angle-right"></i>Student Details</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/home/admit-form" class="nav-link"><i class="fas fa-angle-right"></i>Admission Form</a>
+                                    <a href="admit-form.html" class="nav-link"><i class="fas fa-angle-right"></i>Admission Form</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/home/student-promotion" class="nav-link"><i class="fas fa-angle-right"></i>Student Promotion</a>
+                                    <a href="student-promotion.html" class="nav-link"><i class="fas fa-angle-right"></i>Student Promotion</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i class="flaticon-multiple-users-silhouette"></i><span>Teachers</span></a>
-                            <ul class="nav sub-group-menu sub-group-active">
+                            <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="/home/all-teacher" class="nav-link"><i class="fas fa-angle-right"></i>All Teachers</a>
+                                    <a href="all-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>All Teachers</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/home/teacher-details" class="nav-link menu-active"><i class="fas fa-angle-right"></i>Teacher Details</a>
+                                    <a href="teacher-details.html" class="nav-link"><i class="fas fa-angle-right"></i>Teacher Details</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/home/add-teacher" class="nav-link"><i class="fas fa-angle-right"></i>Add Teacher</a>
+                                    <a href="add-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Add Teacher</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="teacher-payment.html" class="nav-link"><i class="fas fa-angle-right"></i>Payment</a>
@@ -312,12 +316,12 @@
                         </li>
                         <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i class="flaticon-books"></i><span>Library</span></a>
-                            <ul class="nav sub-group-menu">
+                            <ul class="nav sub-group-menu sub-group-active">
                                 <li class="nav-item">
                                     <a href="all-book.html" class="nav-link"><i class="fas fa-angle-right"></i>All Book</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="add-book.html" class="nav-link"><i class="fas fa-angle-right"></i>Add New Book</a>
+                                    <a href="add-book.html" class="nav-link menu-active"><i class="fas fa-angle-right"></i>Add New Book</a>
                                 </li>
                             </ul>
                         </li>
@@ -418,21 +422,21 @@
             <div class="dashboard-content-one">
                 <!-- Breadcubs Area Start Here -->
                 <div class="breadcrumbs-area">
-                    <h3>Teacher</h3>
+                    <h3>Library</h3>
                     <ul>
                         <li>
-                            <a href="/home">Home</a>
+                            <a href="index.html">Home</a>
                         </li>
-                        <li>Teacher Details</li>
+                        <li>Add New Book</li>
                     </ul>
                 </div>
                 <!-- Breadcubs Area End Here -->
-                <!-- Student Table Area Start Here -->
+                <!-- Add New Book Area Start Here -->
                 <div class="card height-auto">
                     <div class="card-body">
                         <div class="heading-layout1">
                             <div class="item-title">
-                                <h3>About Me</h3>
+                                <h3>Add New Book</h3>
                             </div>
                            <div class="dropdown">
                                 <a class="dropdown-toggle" href="#" role="button" 
@@ -445,87 +449,57 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="single-info-details">
-                            <div class="item-img">
-                                <img src="/assets/img/figure/teacher.jpg" alt="teacher">
-                            </div>
-                            <div class="item-content">
-                                <div class="header-inline item-header">
-                                    <h3 class="text-dark-medium font-medium">Steven Johnson</h3>
-                                    <div class="header-elements">
-                                        <ul>
-                                            <li><a href="#"><i class="far fa-edit"></i></a></li>
-                                            <li><a href="#"><i class="fas fa-print"></i></a></li>
-                                            <li><a href="#"><i class="fas fa-download"></i></a></li>
-                                        </ul>
-                                    </div>
+                        <form class="new-added-form">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Book Name *</label>
+                                    <input type="text" placeholder="" class="form-control">
                                 </div>
-                                <p>Aliquam erat volutpat. Curabiene natis massa sedde lacu stiquen sodale 
-                                word moun taiery.Aliquam erat volutpaturabiene natis massa sedde  sodale 
-                                word moun taiery.</p>
-                                <div class="info-table table-responsive">
-                                    <table class="table text-nowrap">
-                                        <tbody>
-                                            <tr>
-                                                <td>Name:</td>
-                                                <td class="font-medium text-dark-medium">Steven Johnson</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Gender:</td>
-                                                <td class="font-medium text-dark-medium">Male</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Father Name:</td>
-                                                <td class="font-medium text-dark-medium">Steve Jones</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Mother Name:</td>
-                                                <td class="font-medium text-dark-medium">Naomi Rose</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Religion:</td>
-                                                <td class="font-medium text-dark-medium">Islam</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Joining Date:</td>
-                                                <td class="font-medium text-dark-medium">07.08.2016</td>
-                                            </tr>
-                                            <tr>
-                                                <td>E-mail:</td>
-                                                <td class="font-medium text-dark-medium">stevenjohnson@gmail.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Subject:</td>
-                                                <td class="font-medium text-dark-medium">English</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Class:</td>
-                                                <td class="font-medium text-dark-medium">2</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Section:</td>
-                                                <td class="font-medium text-dark-medium">Pink</td>
-                                            </tr>
-                                            <tr>
-                                                <td>ID No:</td>
-                                                <td class="font-medium text-dark-medium">10005</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Address:</td>
-                                                <td class="font-medium text-dark-medium">House #10, Road #6, Australia</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Phone:</td>
-                                                <td class="font-medium text-dark-medium">+ 88 98568888418</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Subject *</label>
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Writter Name *</label>
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Class *</label>
+                                    <select class="select2">
+                                        <option value="">Please Select Class *</option>
+                                        <option value="1">Play</option>
+                                        <option value="2">Nursery</option>
+                                        <option value="3">One</option>
+                                        <option value="3">Two</option>
+                                        <option value="3">Three</option>
+                                        <option value="3">Four</option>
+                                        <option value="3">Five</option>
+                                    </select>
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>ID No</label>
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Publishing Date *</label>
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                    <label>Uploade Date *</label>
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+                                <div class="col-md-3 d-none d-xl-block form-group">
+                                   
+                                </div>
+                                <div class="col-12 form-group mg-t-8">
+                                    <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Save</button>
+                                    <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Reset</button>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
-                <!-- Student Table Area End Here -->
+                <!-- Add New Book Area End Here -->
                 <footer class="footer-wrap-layout1">
                     <div class="copyright">© Copyrights <a href="#">akkhor</a> 2019. All rights reserved. Designed by <a href="#">PsdBosS</a></div>
                 </footer>
@@ -534,20 +508,26 @@
         <!-- Page Area End Here -->
     </div>
     <!-- jquery-->
-    <script src="/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
     <!-- Plugins js -->
-    <script src="/assets/js/plugins.js"></script>
+    <script src="js/plugins.js"></script>
     <!-- Popper js -->
-    <script src="/assets/js/popper.min.js"></script>
+    <script src="js/popper.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Select 2 Js -->
+    <script src="js/select2.min.js"></script>
+    <!-- Date Picker Js -->
+    <script src="js/datepicker.min.js"></script>
+    <!-- Smoothscroll Js -->
+    <script src="js/jquery.smoothscroll.min.html"></script>
     <!-- Scroll Up Js -->
-    <script src="/assets/js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
     <!-- Custom Js -->
-    <script src="/assets/js/main.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
 
-<!-- Mirrored from www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/teacher-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Jul 2020 15:10:33 GMT -->
+<!-- Mirrored from www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/add-book.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Jul 2020 15:10:33 GMT -->
 </html>

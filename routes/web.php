@@ -35,6 +35,7 @@ Route::get('/all-student','AdminHomeController@allStudent');
 Route::get('/all-teacher','AdminHomeController@allTeacher');
 
 Route::get('/add-teacher','AdminHomeController@addTeacher');
+Route::post('/add-teacher','AdminHomeController@storeTeacher');
 
 Route::get('/student-details','AdminHomeController@studentDetails');
 
@@ -43,10 +44,13 @@ Route::get('/all-class','AdminHomeController@allClass');
 Route::get('/add-class','AdminHomeController@addClass');
 
 Route::get('/notice-board','AdminHomeController@noticeBoard');
+Route::post('/notice-board','AdminHomeController@postNotice');
 
 Route::get('/all-subject','AdminHomeController@allSubject');
+Route::post('/all-subject','AdminHomeController@addSubject');
 
 Route::get('/class-routine','AdminHomeController@classRoutine');
+Route::post('/class-routine','AdminHomeController@storeRoutine');
 
 });
 
