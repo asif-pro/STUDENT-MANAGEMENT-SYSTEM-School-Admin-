@@ -458,11 +458,11 @@
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Teacher ID *</label>
-                                    <input type="text" placeholder="" class="form-control" name="tid" value="<%= userid %>"readonly>
+                                    <input type="text" placeholder="" class="form-control" name="tid" value="{{$lid}}"readonly>
                                 </div>
                                  <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Passord</label>
-                                    <input  name="password" type="text" placeholder="" class="form-control">
+                                    <input  name="password" type="text" placeholder="" class="form-control" value="{{$pass}}" readonly>
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Gender *</label>

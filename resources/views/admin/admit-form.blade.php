@@ -580,7 +580,7 @@
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Student ID</label>
-                                    <input type="text" placeholder="" class="form-control" name="sid" value="<%= userid %>"readonly>
+                                    <input type="text" placeholder="" class="form-control" name="sid" value="{{$lid}}"readonly>
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Gurdian's Phone Number *</label>
@@ -588,7 +588,7 @@
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Password *</label>
-                                    <input type="text" placeholder="Enter Password" class="form-control"name="password" value="matah" readonly>
+                                    <input type="text" placeholder="Enter Password" class="form-control"name="password" value="{{$pass}}" readonly>
                                 </div>
                                 <div class="col-lg-6 col-12 form-group">
                                     <label>Address *</label>

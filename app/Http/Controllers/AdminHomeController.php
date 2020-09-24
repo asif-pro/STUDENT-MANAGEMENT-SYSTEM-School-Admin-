@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Studentt;
 use App\Login;
+use\Illuminate\Support\Str;
 
 
 class adminHomeController extends Controller
@@ -21,7 +22,15 @@ class adminHomeController extends Controller
   }
 
   function studentAdmitForm(Request $request){
-   return view('admin.admit-form');
+
+    //$lid = DB::table('studentt')->insert([]);
+    $c="102";
+    $lid = "S".'-'.$c.'-'.date('Y');
+
+    $pass = Str::random(10);
+   return view('admin.admit-form')->with('pass', $pass)
+                                  ->with('lid', $lid);
+
   }
     function storeStudent(Request $request){
     
@@ -60,13 +69,16 @@ class adminHomeController extends Controller
   }  
 
   function allTeacher(Request $request){
-  	
-    $teachers = DB::table('teacherr')->get();
+  	$teachers = DB::table('teacherr')->get();
     return view('admin.all-teacher')->with('teachers', $teachers);
   }
 
   function addTeacher(Request $request){
-  	return view('admin.add-teacher');
+    $c="101";
+    $lid = "T".'-'.$c.'-'.date('Y');
+    $pass = Str::random(8);
+  	return view('admin.add-teacher')->with('pass', $pass)
+                                    ->with('lid', $lid);
   }
 
   function studentDetails(Request $request){
