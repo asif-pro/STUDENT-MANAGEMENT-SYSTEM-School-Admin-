@@ -588,7 +588,7 @@
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Password *</label>
-                                    <input type="text" placeholder="Enter Password" class="form-control"name="password" value="<%= pass %>" readonly>
+                                    <input type="text" placeholder="Enter Password" class="form-control"name="password" value="matah" readonly>
                                 </div>
                                 <div class="col-lg-6 col-12 form-group">
                                     <label>Address *</label>

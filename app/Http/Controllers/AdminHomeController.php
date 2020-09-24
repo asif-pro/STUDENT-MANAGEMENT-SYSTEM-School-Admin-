@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Studentt;
+use App\Login;
 
 
 class adminHomeController extends Controller
@@ -21,9 +23,35 @@ class adminHomeController extends Controller
   function studentAdmitForm(Request $request){
    return view('admin.admit-form');
   }
-    /*function storeStudent(Request $request){
-    return view('admin.admit-form');
-  }*/
+    function storeStudent(Request $request){
+    
+    $student = new Studentt();
+    $student->sName = $request->sName;
+    $student->sid = $request->sid;
+    $student->fName = $request->fName;
+    $student->mName = $request->mName;
+    $student->gender = $request->gender;
+    $student->dob = $request->dob;
+    $student->admissionDate = $request->admissionDate;
+    $student->bGroup = $request->bGroup;
+    $student->religion = $request->religion;
+    $student->eMail = $request->eMail;
+    $student->admissionClass = $request->admissionClass;
+    $student->section = $request->section;
+    $student->gPN = $request->gPN;
+    $student->address = $request->address;
+    $student->myImage = $request->myImage;
+    $student->save();
+
+
+    $login = new Login();
+    $login->user_id = $request->sid;
+    $login->userpassword = $request->password;
+    $login->usertype = "student";
+    $login->save();
+
+     return redirect('/all-student');
+  }
 
   function allStudent(Request $request){
   	
