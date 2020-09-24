@@ -544,7 +544,7 @@
                                         <td>{{$students[$i]->address}}</td>
                                         <td>{{$students[$i]->admissionClass}}</td>
                                         <td>{{$students[$i]->admissionDate}}</td>
-                                        <td><a  class="btn-fill-lg bg-blue-dark btn-hover-yellow" >UPDATE</a>  <a href="/home/delete/{{$students[$i]->sid}}" class="btn-fill-lg btn-gradient-yellow"  > DELETE </a></td>
+                                        <td><a href="/update-student/{{$students[$i]->sid}}"  class="btn-fill-lg bg-blue-dark btn-hover-yellow" >UPDATE</a>  <a href="/home/delete/{{$students[$i]->sid}}" class="btn-fill-lg btn-gradient-yellow"  > DELETE </a></td>
                                         <td>
                                             <div class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"

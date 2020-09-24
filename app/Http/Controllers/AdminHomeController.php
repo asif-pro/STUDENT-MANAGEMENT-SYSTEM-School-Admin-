@@ -160,6 +160,37 @@ class adminHomeController extends Controller
 
 
   }
+    function update($id, Request $request){
+
+      $student = DB::table('Studentt')->where('sid', $id)->get();
+
+      //$student = Studentt::find($id);
+      //return view('admin.update')->with('student', $student);
+      return view('admin.update')->with('student', $student);
+
+  }
+  function storeUpdate($id, Request $request){
+
+   $student = array ();
+   $student ['sName'] = $request->name;
+   $student ['sid'] = $request->sid;
+   $student ['fName'] = $request->fName;
+   $student ['mName'] = $request->mName;
+   $student ['gender'] = $request->gender;
+   $student ['dob'] = $request->dob;
+   $student ['admissionDate'] = $request->admDate;
+   $student ['bGroup'] = $request->bg;
+   $student ['religion'] = $request->rg;
+   $student ['eMail'] = $request->email;
+   $student ['admissionClass'] = $request->admClass;
+   $student ['section'] = $request->section;
+   $student ['gPN'] = $request->gpn;
+   $student ['address'] = $request->address;
+   $student ['myImage'] = $request->simg;
+   DB::table('Studentt')->where('sid',$id)->update($student);
+    return redirect('/all-student');
+  }
+
 
   function classRoutine(Request $request){
   	
@@ -183,6 +214,7 @@ class adminHomeController extends Controller
     return redirect('/class-routine');
 
   }
+
 
 
 

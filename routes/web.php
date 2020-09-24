@@ -52,5 +52,9 @@ Route::post('/all-subject','AdminHomeController@addSubject');
 Route::get('/class-routine','AdminHomeController@classRoutine');
 Route::post('/class-routine','AdminHomeController@storeRoutine');
 
+Route::get('/update-student/{id}','AdminHomeController@update');
+Route::post('/update-student/{id}','AdminHomeController@storeUpdate');
+
+
 });
 
