@@ -48,6 +48,22 @@ class adminHomeController extends Controller
     function storeStudent(UserRequest $request){
     
 
+
+         //if($request->hasFile('myImage'))
+            $file = $request->file('myImage');
+            /*echo "File Name: ". $file->getClientOriginalName()."<br>";
+            echo "File Extension: ". $file->getClientOriginalExtension()."<br>";
+            echo "File Size: ". $file->getSize()."<br>";
+            echo "File Mime Type: ". $file->getMimeType();*/
+
+            $file->move('upload', $file->getClientOriginalName());
+
+
+
+
+
+
+
     $student                 = new Studentt();
     $student->sName          = $request->sName;
     $student->sid            = $request->sid;
@@ -63,7 +79,7 @@ class adminHomeController extends Controller
     $student->section        = $request->section;
     $student->gPN            = $request->gPN;
     $student->address        = $request->address;
-    $student->myImage        = $request->myImage;
+    $student->myImage        = $file->getClientOriginalName();
     $student->save();
 
 

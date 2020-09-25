@@ -30,16 +30,16 @@ class UserRequest extends FormRequest
       'fName'         => 'required',
       'mName'         => 'required',
       'gender'        => 'required',
-      'dob'           => 'required|Date',
-      'admissionDate' => 'required|Date',
+      'dob'           => 'required',
+      'admissionDate' => 'required',
       'bGroup'        => 'required',
       'religion'      => 'required',
       'eMail'         => 'required|Email',
       'admissionClass' => 'required',
       'section'        => 'required',
-      'gPN'            => 'required|Numeric|max:11',
+      'gPN'            => 'required|Numeric',
       'address'        => 'required',
-      'myImage'        => 'required'
+      'myImage'        => 'required|File'
     
     ];
 

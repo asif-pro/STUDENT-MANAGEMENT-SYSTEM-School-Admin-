@@ -498,10 +498,10 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            <div class="form-check">
+                                            <!-- <div class="form-check">
                                                 <input type="checkbox" class="form-check-input checkAll">
                                                 <label class="form-check-label">Roll</label>
-                                            </div>
+                                            </div> -->
                                         </th>
                                         <th>Photo</th>
                                         <th>ID</th>
@@ -526,10 +526,11 @@
                                         <td>
                                             <div class="form-check">
                                                 <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">#0021</label>
+                                                <!-- <label class="form-check-label">#0021</label> -->
                                             </div>
                                         </td>
-                                        <td class="text-center"><img src="/assets/img/figure/student2.png" alt="student"></td>
+                                        <!-- <td class="text-center"><img src="/assets/img/figure/student2.png" alt="student"></td> -->
+                                        <td class="text-center"><img src="/upload/{{$students[$i]->myImage}}" alt=""></td>
                                         <td>{{$students[$i]->sid}}</td>
                                         <td>{{$students[$i]->sName}}</td>
                                         <td>{{$students[$i]->section}}</td>
