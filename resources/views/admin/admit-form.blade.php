@@ -489,15 +489,15 @@
                             <div class="row">
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Full Name *</label>
-                                    <input type="text" placeholder="Student's Full Name" class="form-control"name="sName">
+                                    <input type="text" placeholder="Student's Full Name" class="form-control"name="sName" value="{{old('sName')}}" >
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Father's Name *</label>
-                                    <input type="text" placeholder="Enter Father's Name" class="form-control"name="fName">
+                                    <input type="text" placeholder="Enter Father's Name" class="form-control"name="fName" value="{{old('fName')}}">
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Mother's Name *</label>
-                                    <input type="text" placeholder="Enter Mother's Name" class="form-control"name="mName">
+                                    <input type="text" placeholder="Enter Mother's Name" class="form-control"name="mName" value="{{old('mName')}}">
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Gender *</label>
@@ -511,13 +511,13 @@
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Date Of Birth *</label>
                                     <input type="text" name="dob" placeholder="dd/mm/yyyy" class="form-control air-datepicker"
-                                        data-position='bottom right'>
+                                        data-position='bottom right' value="{{old('dob')}}">
                                     <i class="far fa-calendar-alt"></i>
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Admission Date</label>
                                     <input type="text" name="admissionDate" placeholder="dd/mm/yyyy" class="form-control air-datepicker"
-                                        data-position='bottom right'>
+                                        data-position='bottom right' value="{{old('admissionDate')}}">
                                     <i class="far fa-calendar-alt"></i>
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
@@ -545,7 +545,7 @@
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>E-Mail</label>
-                                    <input type="email" placeholder="" class="form-control" name="eMail">
+                                    <input type="email" placeholder="" class="form-control" name="eMail" value="{{old('eMail')}}">
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Addmission in Class *</label>
@@ -584,7 +584,7 @@
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Gurdian's Phone Number *</label>
-                                    <input type="text" placeholder="Phone Number" class="form-control" name="gPN">
+                                    <input type="text" placeholder="Phone Number" class="form-control" name="gPN" value="{{old('gPN')}}">
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Password *</label>
@@ -592,18 +592,21 @@
                                 </div>
                                 <div class="col-lg-6 col-12 form-group">
                                     <label>Address *</label>
-                                    <textarea class="textarea form-control" name="address" id="form-message" cols="10"
+                                    <textarea class="textarea form-control" name="address" value="{{old('address')}}" id="form-message" cols="10"
                                         rows="9"></textarea>
                                 </div>
                                 <div class="col-lg-6 col-12 form-group mg-t-30">
                                     <label class="text-dark-medium">Upload Student Photo</label>
-                                    <input name="myImage" type="file" class="form-control-file">
+                                    <input name="myImage" type="file" class="form-control-file" value="{{old('myImage')}}">
                                 </div>
                                 <div class="col-12 form-group mg-t-8">
                                     <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Save</button>
                                 </div>
                             </div>
                         </form>
+                        @foreach($errors->all() as $err)
+                        {{$err}}<br>
+                        @endforeach
                     </div>
                 </div>
                 <!-- Admit Form Area End Here -->

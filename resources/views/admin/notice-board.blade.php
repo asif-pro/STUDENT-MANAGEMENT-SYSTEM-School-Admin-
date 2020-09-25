@@ -456,17 +456,21 @@
                                     <div class="row">
                                         <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                             <label>Title</label>
-                                            <input name="nTitle" type="text" placeholder="" class="form-control">
+                                            <input name="nTitle" type="text" placeholder="" class="form-control" value="{{old('nTitle')}}">
                                         </div>
                                         <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                             <label>Details</label>
-                                            <input name="nDetails" type="text" placeholder="" class="form-control">
+                                            <input name="nDetails" type="text" placeholder="" class="form-control" value="{{old('nDetails')}}">
                                         </div>
                                        
                                         <div class="col-12-xxxl col-lg-6 col-12 form-group">
+                                           <!--  <label>Date</label>
+                                            <input name="date" type="text" placeholder="" class="form-control air-datepicker" value="{{old('date')}}">
+                                            <i class="far fa-calendar-alt"></i> -->
                                             <label>Date</label>
-                                            <input name="date" type="text" placeholder="" class="form-control air-datepicker">
-                                            <i class="far fa-calendar-alt"></i>
+                                            <input name="date" type="text" placeholder="" class="form-control" value="{{$datee}}" readonly>
+
+
                                         </div>
                                         <div class="col-12 form-group mg-t-8">
                                             <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Save</button>
@@ -474,6 +478,10 @@
                                         </div>
                                     </div>
                                 </form>
+
+                                @foreach($errors->all() as $err)
+                                {{$err}}<br>
+                                @endforeach
                             </div>
                         </div>
                     </div>

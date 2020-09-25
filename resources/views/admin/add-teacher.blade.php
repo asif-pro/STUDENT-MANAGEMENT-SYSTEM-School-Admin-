@@ -454,7 +454,7 @@
                             <div class="row">
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Teacher Name *</label>
-                                    <input name = "tName" type="text" placeholder="" class="form-control">
+                                    <input name = "tName" type="text" placeholder="" class="form-control" value="{{old('tName')}}">
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Teacher ID *</label>
@@ -475,28 +475,28 @@
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Date Of Birth *</label>
-                                    <input name ="dob" type="text" placeholder="dd/mm/yyyy" class="form-control air-datepicker">
+                                    <input name ="dob" type="text" placeholder="dd/mm/yyyy" class="form-control air-datepicker" value="{{old('dob')}}">
                                     <i class="far fa-calendar-alt"></i>
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Department</label>
-                                    <input name ="department" type="text" placeholder="" class="form-control">
+                                    <input name ="department" type="text" placeholder="" class="form-control" value="{{old('department')}}">
                                 </div>
                                 
                                 
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>E-Mail</label>
-                                    <input name="email" type="email" placeholder="" class="form-control">
+                                    <input name="email" type="email" placeholder="" class="form-control" value="{{old('email')}}">
                                 </div>
                                 
                               
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Phone</label>
-                                    <input  name="phone" type="text" placeholder="" class="form-control">
+                                    <input  name="phone" type="text" placeholder="" class="form-control" value="{{old('phone')}}">
                                 </div>
                                 <div class="col-lg-6 col-12 form-group">
                                     <label>Address</label>
-                                    <textarea  name="address" class="textarea form-control" name="message" id="form-message" cols="10" rows="9"></textarea>
+                                    <textarea  name="address" class="textarea form-control" name="message" id="form-message" value="{{old('address')}}" cols="10" rows="9"></textarea>
                                 </div>
                                 
                                 <div class="col-12 form-group mg-t-8">
@@ -505,6 +505,9 @@
                                 </div>
                             </div>
                         </form>
+                        @foreach($errors->all() as $err)
+                        {{$err}}<br>
+                        @endforeach
                     </div>
                 </div>
                 <!-- Add New Teacher Area End Here -->

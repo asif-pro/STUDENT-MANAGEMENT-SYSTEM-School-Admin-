@@ -491,39 +491,39 @@
                                     <div class="row">
                                         <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                             <label>Section ID</label>
-                                            <input type="text" name="sID" placeholder="" class="form-control">
+                                            <input type="text" name="sID" placeholder="" class="form-control" value="{{old('sID')}}">
                                         </div>
                                         <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                             <label>Section Name</label>
-                                            <input type="text" name="sName" placeholder="" class="form-control">
+                                            <input type="text" name="sName" placeholder="" class="form-control" value="{{old('sName')}}">
                                         </div>
                                         <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                             <label>Class</label>
-                                            <input type="text" name="class" placeholder="" class="form-control">
+                                            <input type="text" name="class" placeholder="" class="form-control" value="{{old('class')}}">
                                         </div>
                                         <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                             <label>Subject Name </label>
-                                            <input type="text" name="subName" placeholder="" class="form-control">
+                                            <input type="text" name="subName" placeholder="" class="form-control" value="{{old('subName')}}">
                                         </div>
                                         <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                             <label>Teacher ID</label>
-                                            <input type="text" name="tID" placeholder="" class="form-control">
+                                            <input type="text" name="tID" placeholder="" class="form-control" value="{{old('tID')}}">
                                         </div>
                                         <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                             <label>Teacher Name</label>
-                                            <input type="text" name="tName"  placeholder="" class="form-control">
+                                            <input type="text" name="tName"  placeholder="" class="form-control" value="{{old('tName')}}">
                                         </div>
                                         <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                             <label>Start Time</label>
-                                            <input type="text" name="sTime"  placeholder="" class="form-control">
+                                            <input type="text" name="sTime"  placeholder="" class="form-control" value="{{old('sTime')}}">
                                         </div>
                                         <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                             <label>Finish Time</label>
-                                            <input type="text" name="fTime"  placeholder="" class="form-control">
+                                            <input type="text" name="fTime"  placeholder="" class="form-control" value="{{old('fTime')}}">
                                         </div>
                                         <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                             <label>Day</label>
-                                            <input type="text" name="day"  placeholder="" class="form-control">
+                                            <input type="text" name="day"  placeholder="" class="form-control" value="{{old('day')}}">
                                         </div>
                                         <div class="col-12 form-group mg-t-8">
                                             <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Save</button>
@@ -531,7 +531,10 @@
                                         </div>
                                     </div>
                                 </form>
-                            </div>
+                                @foreach($errors->all() as $err)
+                                {{$err}}<br>
+                                @endforeach
+                        </div>
                         </div>
                     </div>
                     <div class="col-8-xxxl col-12">

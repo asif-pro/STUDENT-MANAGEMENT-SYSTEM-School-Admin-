@@ -10,6 +10,12 @@ use App\Subjectt;
 use App\NoticeBoard;
 use App\ClassRoutine;
 use\Illuminate\Support\Str;
+use Validator;
+use App\Http\Requests\UserRequest;
+use App\Http\Requests\TeacherRequests;
+use App\Http\Requests\SubjectRequests;
+use App\Http\Requests\RoutineRequests;
+use App\Http\Requests\NoticeRequests;
 
 
 class adminHomeController extends Controller
@@ -30,39 +36,41 @@ class adminHomeController extends Controller
   function studentAdmitForm(Request $request){
 
     //$lid = DB::table('studentt')->insert([]);
-    $c="102";
-    $lid = "S".'-'.$c.'-'.date('Y');
+    $rn = mt_rand(11, 8999);
+    //$c="102";
+    $lid = "S".'-'.$rn.'-'.date('Y');
 
     $pass = Str::random(10);
    return view('admin.admit-form')->with('pass', $pass)
                                   ->with('lid', $lid);
 
   }
-    function storeStudent(Request $request){
+    function storeStudent(UserRequest $request){
     
-    $student = new Studentt();
-    $student->sName = $request->sName;
-    $student->sid = $request->sid;
-    $student->fName = $request->fName;
-    $student->mName = $request->mName;
-    $student->gender = $request->gender;
-    $student->dob = $request->dob;
-    $student->admissionDate = $request->admissionDate;
-    $student->bGroup = $request->bGroup;
-    $student->religion = $request->religion;
-    $student->eMail = $request->eMail;
+
+    $student                 = new Studentt();
+    $student->sName          = $request->sName;
+    $student->sid            = $request->sid;
+    $student->fName          = $request->fName;
+    $student->mName          = $request->mName;
+    $student->gender         = $request->gender;
+    $student->dob            = $request->dob;
+    $student->admissionDate  = $request->admissionDate;
+    $student->bGroup         = $request->bGroup;
+    $student->religion       = $request->religion;
+    $student->eMail          = $request->eMail;
     $student->admissionClass = $request->admissionClass;
-    $student->section = $request->section;
-    $student->gPN = $request->gPN;
-    $student->address = $request->address;
-    $student->myImage = $request->myImage;
+    $student->section        = $request->section;
+    $student->gPN            = $request->gPN;
+    $student->address        = $request->address;
+    $student->myImage        = $request->myImage;
     $student->save();
 
 
-    $login = new Login();
-    $login->user_id = $request->sid;
+    $login               = new Login();
+    $login->user_id      = $request->sid;
     $login->userpassword = $request->password;
-    $login->usertype = "student";
+    $login->usertype     = "student";
     $login->save();
 
      return redirect('/all-student');
@@ -80,14 +88,15 @@ class adminHomeController extends Controller
   }
 
   function addTeacher(Request $request){
-    $c="101";
-    $lid = "T".'-'.$c.'-'.date('Y');
+    //$c="101";
+    $rn = mt_rand(02, 8999);
+    $lid = "T".'-'.$rn.'-'.date('Y');
     $pass = Str::random(8);
   	return view('admin.add-teacher')->with('pass', $pass)
                                     ->with('lid', $lid);
   }
 
-  function storeTeacher(Request $request){
+  function storeTeacher(TeacherRequests $request){
   $teacher             = new Teacherr();
   $teacher->tName      = $request->tName;
   $teacher->tid        = $request->tid;
@@ -125,12 +134,13 @@ class adminHomeController extends Controller
 
 
   function noticeBoard(Request $request){
-  	
+  	$datee = date("d-m-Y");
   $notices = DB::table('noticeboard')->get();
-  return view('admin.notice-board')->with('notices', $notices);
+  return view('admin.notice-board')->with('notices', $notices)
+                                   ->with('datee', $datee);
 
   }
-  function postNotice(Request $request){
+  function postNotice(NoticeRequests $request){
   
   $notice            = new NoticeBoard();
   $notice->nTitle    = $request->nTitle;
@@ -148,7 +158,7 @@ class adminHomeController extends Controller
     return view('admin.all-subject')->with('subjects', $subjects);
 
   }
-  function addSubject(Request $request){
+  function addSubject(SubjectRequests $request){
     
     $subject          = new Subjectt();
     $subject->sName   = $request->subjectName;
@@ -171,22 +181,23 @@ class adminHomeController extends Controller
   }
   function storeUpdate($id, Request $request){
 
-   $student = array ();
-   $student ['sName'] = $request->name;
-   $student ['sid'] = $request->sid;
-   $student ['fName'] = $request->fName;
-   $student ['mName'] = $request->mName;
-   $student ['gender'] = $request->gender;
-   $student ['dob'] = $request->dob;
-   $student ['admissionDate'] = $request->admDate;
-   $student ['bGroup'] = $request->bg;
-   $student ['religion'] = $request->rg;
-   $student ['eMail'] = $request->email;
+   $student                    = array ();
+   $student ['sName']          = $request->name;
+   $student ['sid']            = $request->sid;
+   $student ['fName']          = $request->fName;
+   $student ['mName']          = $request->mName;
+   $student ['gender']         = $request->gender;
+   $student ['dob']            = $request->dob;
+   $student ['admissionDate']  = $request->admDate;
+   $student ['bGroup']         = $request->bg;
+   $student ['religion']       = $request->rg;
+   $student ['eMail']          = $request->email;
    $student ['admissionClass'] = $request->admClass;
-   $student ['section'] = $request->section;
-   $student ['gPN'] = $request->gpn;
-   $student ['address'] = $request->address;
-   $student ['myImage'] = $request->simg;
+   $student ['section']        = $request->section;
+   $student ['gPN']            = $request->gpn;
+   $student ['address']        = $request->address;
+   $student ['myImage']        = $request->simg;
+
    DB::table('Studentt')->where('sid',$id)->update($student);
     return redirect('/all-student');
   }
@@ -210,7 +221,7 @@ class adminHomeController extends Controller
     $routine = DB::table('c_routine')->get();
   return view('admin.class-routine')->with('routine', $routine);
   }
-  function storeRoutine(Request $request){
+  function storeRoutine(RoutineRequests $request){
 
     $routine               = new ClassRoutine();
     $routine->class_id     = $request->sID;
