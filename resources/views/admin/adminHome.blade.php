@@ -320,7 +320,7 @@
                                         Book</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="add-book.html" class="nav-link"><i class="fas fa-angle-right"></i>Add New
+                                    <a href="/add-book" class="nav-link"><i class="fas fa-angle-right"></i>Add New
                                         Book</a>
                                 </li>
                             </ul>

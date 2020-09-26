@@ -20,6 +20,9 @@ Route::get('/', function () {
 Route::get('/login','LoginController@index');
 Route::post('/login','LoginController@validation');
 Route::get('/logout','LogoutController@index');
+Route::get('/add-book','LibraryController@index');
+
+
 
 
 
@@ -31,6 +34,8 @@ Route::get('/student-admit-form','AdminHomeController@studentAdmitForm');
 Route::post('/student-admit-form','AdminHomeController@storeStudent');
 
 Route::get('/all-student','AdminHomeController@allStudent');
+Route::post('/all-student','AdminHomeController@search');
+
 
 Route::get('/all-teacher','AdminHomeController@allTeacher');
 
@@ -57,6 +62,10 @@ Route::post('/update-student/{id}','AdminHomeController@storeUpdate');
 
 Route::get('/delete-student/{id}','AdminHomeController@deleteStudent');
 Route::post('/delete-student/{id}','AdminHomeController@destroyStudent');
+
+//Route::get('/add-book','AdminHomeController@addBook');
+//Route::post('/add-book','AdminHomeController@storeBook');
+
 
 
 });

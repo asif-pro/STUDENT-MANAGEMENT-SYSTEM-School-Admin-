@@ -482,11 +482,11 @@
                                 </div>
                             </div>
                         </div>
-                        <form class="mg-b-20">
+                        <form method="post" class="mg-b-20">
                             @csrf
                             <div class="row gutters-8">
                                 <div class="col-4-xxxl col-xl-4 col-lg-3 col-12 form-group">
-                                    <input type="text" placeholder="Search by Name ..." class="form-control">
+                                    <input type="text" name="searchk" id="searchk" onkeyup="ajax()" placeholder="Search by Name ..." class="form-control">
                                 </div>
                                 <div class="col-1-xxxl col-xl-2 col-lg-3 col-12 form-group">
                                     <button type="submit" class="fw-btn-fill btn-gradient-yellow">SEARCH</button>
@@ -519,9 +519,19 @@
                                         <th>Admitted in class</th>
                                         <th>Admission Date</th>
                                         <th></th>
+                                        
+                                            
+                                       
                                     </tr>
                                 </thead>
-                                <tbody>
+                                
+                                    <tbody >
+                                        <div id="data"></div>
+                                        
+
+                                    </tbody>
+                                
+                                <tbody >
                                      @for($i=0; $i != count ($students); $i++)
                                         <td>
                                             <div class="form-check">
@@ -593,6 +603,34 @@
     <script src="/assets/js/jquery.dataTables.min.js"></script>
     <!-- Custom Js -->
     <script src="/assets/js/main.js"></script>
+
+    <script type="text/javascript">
+
+  function ajax(){
+
+    var searchk = document.getElementById('searchk').value;
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.open('POST', '/all-student', true);
+    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhttp.send('sName='+searchk);
+
+    xhttp.onreadystatechange = function(){
+
+      if(this.readyState == 4 && this.status == 200){
+        document.getElementById('data').innerHTML =  this.responseText;
+
+      }
+      else{
+        document.getElementById('data').innerHTML =  "Connection Error";
+      }
+    }
+  }
+
+  function abc(){
+    alert('test');
+  }
+  </script>
 
 </body>
 

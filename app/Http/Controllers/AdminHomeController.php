@@ -9,6 +9,7 @@ use App\Teacherr;
 use App\Subjectt;
 use App\NoticeBoard;
 use App\ClassRoutine;
+use App\Library;
 use\Illuminate\Support\Str;
 use Validator;
 use App\Http\Requests\UserRequest;
@@ -230,6 +231,76 @@ class adminHomeController extends Controller
     $destroy = DB::table ('Studentt')->where('sid',$id)->delete();
     return redirect('/all-student');
   }
+  /*function addBook(Request $request){
+
+      
+
+    return view('admin.add-book');
+
+  }
+  function storeBook(Request $request){
+    $library                 = new Library();
+    $library->bid          = $request->bid;
+    $library->bname            = $request->bname;
+    $library->author          = $request->author;
+    $library->created_at = "";
+    $library->updated_at = ""
+
+    $library->save();
+  }*/
+
+public function search(Request $request){
+    //$teacher_id = $_POST['teacher_id'];
+    $searchk = $request->searchk;
+
+
+    $studentt = new Studentt();
+    $routineList = $studentt->where('sid', 'like', '%'.$searchk.'%')
+                            ->get();
+    $output = '';
+    if(count($routineList)>0){
+      foreach($routineList as $row)
+      {
+        $output = "{
+                    <tr>
+                      <th>'{$row->Photo}'</th>
+                      <th>'{$row->ID}'</th>
+                      <th>'{$row->Name}'</th>
+                      <th>'{$row->Section}'</th>
+                      <th>'{$row->Blood_Group}'</th>
+                      <th>'{$row->Gender}'</th>
+                      <th>'{$row->Father}'</th>
+                      <th>'{$row->Mother}'</th>
+                      <th>'{$row->Date_Of_Birth}'</th>
+                      <th>'{$row->Phone}'</th>
+                      <th>'{$row->E_mail}'</th>
+                      <th>'{$row->Religion}'</th>
+                      <th>'{$row->Address}'</th>
+                      <th>'{$row->Admitted_in_class}'</th>
+                      <th>'{$row->Admission_Date}'</th>
+                    </tr>
+                    }";
+      }
+      //echo $output;
+      echo "Wrong";
+    }
+    else{
+      $output = '
+       <tr>
+        <td>No Data Found</td>
+       </tr>
+       ';
+      echo $output;
+    }
+
+  }
+
+
+
+
+
+
+
 
 
   function classRoutine(Request $request){
