@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 
 use App\Library;
 use Illuminate\Http\Request;
@@ -35,14 +36,20 @@ class LibraryController extends Controller
      */
     public function store(Request $request)
     {
-       /*$library = new Library();
-        $library->bid        = $request->bid;
-        $library->bname      = $request->bname;
-        $library->author     = $request->author;
+        /*$library = new Library();*/
+
+
+ DB::table('libraries')->insert(['bid'      => $request->bid,
+                               'bname'    => $request->bname,
+                               'author'    => $request->author]);
+
+        /*$library->        = $request->bid;
+        $library->      = $request->bname;
+        $library->     = $request->author;
         $library->created_at = "";
         $library->updated_at = ""
-        $library->save();
-        return redirect('/home');*/
+        $library->save();*/
+        return redirect('/home');
     }
 
     /**
@@ -51,9 +58,9 @@ class LibraryController extends Controller
      * @param  \App\Library  $library
      * @return \Illuminate\Http\Response
      */
-    public function show(Library $library)
+    public function show(Request $request)
     {
-        //
+        return view('admin.viewbook');
     }
 
     /**

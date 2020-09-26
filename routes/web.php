@@ -21,6 +21,9 @@ Route::get('/login','LoginController@index');
 Route::post('/login','LoginController@validation');
 Route::get('/logout','LogoutController@index');
 Route::get('/add-book','LibraryController@index');
+Route::get('/library','LibraryController@show');
+Route::post('/add-book','LibraryController@store');
+
 
 
 
