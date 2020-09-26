@@ -316,7 +316,7 @@
                             <a href="#" class="nav-link"><i class="flaticon-books"></i><span>Library</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="all-book.html" class="nav-link"><i class="fas fa-angle-right"></i>All
+                                    <a href="/library" class="nav-link"><i class="fas fa-angle-right"></i>All
                                         Book</a>
                                 </li>
                                 <li class="nav-item">

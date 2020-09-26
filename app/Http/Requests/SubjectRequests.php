@@ -27,9 +27,9 @@ class SubjectRequests extends FormRequest
 
 
       'sName'         => 'required',
-      'sCode'         => 'required',
-      'sType'         => 'required',
-      'sClass'        => 'required|Numeric'
+      'sCode'         => 'required'
+     /* 'sType'         => 'required',
+      'sClass'        => 'required|Numeric'*/
 
     ];
 

@@ -43,13 +43,8 @@ class LibraryController extends Controller
                                'bname'    => $request->bname,
                                'author'    => $request->author]);
 
-        /*$library->        = $request->bid;
-        $library->      = $request->bname;
-        $library->     = $request->author;
-        $library->created_at = "";
-        $library->updated_at = ""
-        $library->save();*/
-        return redirect('/home');
+    
+        return redirect('/library');
     }
 
     /**
@@ -58,9 +53,11 @@ class LibraryController extends Controller
      * @param  \App\Library  $library
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request)
+    public function show(Library $library)
     {
-        return view('admin.viewbook');
+        $libraries = DB::table('libraries')->get();
+    return view('admin.viewbook')->with('libraries', $libraries);
+        //return view('admin.viewbook');
     }
 
     /**

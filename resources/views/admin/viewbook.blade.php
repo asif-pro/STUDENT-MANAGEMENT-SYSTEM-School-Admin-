@@ -12,18 +12,21 @@
 		
 		{{csrf_field()}}
 		<table>
+			@for($i=0; $i != count ($libraries); $i++)
 			<tr>
 				<td>Book ID</td>
-				<td><input type="text" name="bid" value="{{$student[0]->sid}}"</td>
+				
+				<label>{{$libraries[$i]->bid}} </label>
 			</tr>
 			<tr>
 				<td>Book Name</td>
-				<td><input type="text" name="bname" value="{{$student[0]->sName}}"></td>
+				
+				<label>{{$libraries[$i]->bname}}</label>
 			</tr>
 
 			<tr>
 				<td>Author</td>
-				<td><input type="text" name="author" value="{{$student[0]->section}}"></td>
+				<td><input type="text" name="author" value="{{$libraries[$i]->author}}"></td>
 			</tr>
 			
 				</td>
@@ -33,6 +36,7 @@
 				<td><input type="submit" name="submit" value="update"></td>
 			</tr>
 		</table>
+		@endfor
 	</form>
 </body>
 </html>
