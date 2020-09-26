@@ -20,13 +20,7 @@ Route::get('/', function () {
 Route::get('/login','LoginController@index');
 Route::post('/login','LoginController@validation');
 Route::get('/logout','LogoutController@index');
-Route::get('/add-book','LibraryController@index');
-Route::post('/add-book','LibraryController@store');
-Route::get('/library','LibraryController@show');
-
-
-
-
+//Route::get('/add-book','LibraryController@index');
 
 
 
@@ -40,6 +34,9 @@ Route::post('/student-admit-form','AdminHomeController@storeStudent');
 Route::get('/all-student','AdminHomeController@allStudent');
 Route::post('/all-student','AdminHomeController@search');
 
+Route::get('/add-book','LibraryController@index');
+Route::post('/add-book','LibraryController@store');
+Route::get('/library','LibraryController@show');
 
 Route::get('/all-teacher','AdminHomeController@allTeacher');
 
@@ -48,9 +45,11 @@ Route::post('/add-teacher','AdminHomeController@storeTeacher');
 
 Route::get('/student-details','AdminHomeController@studentDetails');
 
-Route::get('/all-class','AdminHomeController@allClass');
 
-Route::get('/add-class','AdminHomeController@addClass');
+
+Route::get('/add-class','ClaassesController@index');
+Route::get('/all-class','ClaassesController@show');
+Route::post('/add-class','ClaassesController@store');
 
 Route::get('/notice-board','AdminHomeController@noticeBoard');
 Route::post('/notice-board','AdminHomeController@postNotice');

@@ -491,7 +491,7 @@
                                     <div class="row">
                                         <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                             <label>Subject Name *</label>
-                                            <input name="subjectName"type="text" placeholder="" class="form-control" value="{{old('subjectName')}}">
+                                            <input name="subjectName" type="text" placeholder="" class="form-control" value="{{old('subjectName')}}">
                                         </div>
                                         <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                             <label>Subject Code *</label>

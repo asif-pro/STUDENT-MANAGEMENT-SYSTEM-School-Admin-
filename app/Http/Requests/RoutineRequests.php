@@ -26,14 +26,14 @@ class RoutineRequests extends FormRequest
         return [
 
 
-      'class_id'    => 'required',
-      'sec_name'    => 'required',
+      'sID'    => 'required',
+      'sName'    => 'required',
       'class'       => 'required',
-      'course_name' => 'required',
-      't_name'      => 'required',
-      't_id'        => 'required',
-      'start_time'  => 'required',
-      'finish_time' => 'required',
+      'subName' => 'required',
+      'tName'      => 'required',
+      'tID'        => 'required',
+      'sTime'  => 'required',
+      'fTime' => 'required',
       'day'         => 'required'
     
     ];

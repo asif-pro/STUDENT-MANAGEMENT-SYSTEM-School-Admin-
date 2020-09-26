@@ -39,9 +39,9 @@ class LibraryController extends Controller
         /*$library = new Library();*/
 
 
- DB::table('libraries')->insert(['bid'      => $request->bid,
+ DB::table('libraries')->insert(['bid'    => $request->bid,
                                'bname'    => $request->bname,
-                               'author'    => $request->author]);
+                               'author'   => $request->author]);
 
     
         return redirect('/library');
